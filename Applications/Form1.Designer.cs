@@ -49,9 +49,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.ledBrightnessLb = new System.Windows.Forms.Label();
             this.ledBox = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.ledBrightnessLb = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -328,6 +328,18 @@
             this.panel3.Size = new System.Drawing.Size(52, 63);
             this.panel3.TabIndex = 8;
             // 
+            // ledBrightnessLb
+            // 
+            this.ledBrightnessLb.AutoSize = true;
+            this.ledBrightnessLb.BackColor = System.Drawing.Color.Transparent;
+            this.ledBrightnessLb.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ledBrightnessLb.ForeColor = System.Drawing.Color.Coral;
+            this.ledBrightnessLb.Location = new System.Drawing.Point(9, 40);
+            this.ledBrightnessLb.Name = "ledBrightnessLb";
+            this.ledBrightnessLb.Size = new System.Drawing.Size(36, 16);
+            this.ledBrightnessLb.TabIndex = 9;
+            this.ledBrightnessLb.Text = "100%";
+            // 
             // ledBox
             // 
             this.ledBox.BackColor = System.Drawing.Color.Blue;
@@ -346,19 +358,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(50, 16);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "الاصدار 2";
-            // 
-            // ledBrightnessLb
-            // 
-            this.ledBrightnessLb.AutoSize = true;
-            this.ledBrightnessLb.BackColor = System.Drawing.Color.Transparent;
-            this.ledBrightnessLb.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ledBrightnessLb.ForeColor = System.Drawing.Color.Coral;
-            this.ledBrightnessLb.Location = new System.Drawing.Point(9, 40);
-            this.ledBrightnessLb.Name = "ledBrightnessLb";
-            this.ledBrightnessLb.Size = new System.Drawing.Size(36, 16);
-            this.ledBrightnessLb.TabIndex = 9;
-            this.ledBrightnessLb.Text = "100%";
+            this.linkLabel1.Text = "الاصدار 1";
             // 
             // Form1
             // 
