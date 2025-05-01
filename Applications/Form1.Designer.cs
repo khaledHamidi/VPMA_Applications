@@ -49,7 +49,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ledBox = new System.Windows.Forms.PictureBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -389,7 +388,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox ledBox;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button3;
     }
 }
