@@ -326,7 +326,7 @@
             // ledBox
             // 
             this.ledBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ledBox.Location = new System.Drawing.Point(3, 4);
+            this.ledBox.Location = new System.Drawing.Point(0, 4);
             this.ledBox.Name = "ledBox";
             this.ledBox.Size = new System.Drawing.Size(46, 56);
             this.ledBox.TabIndex = 0;
