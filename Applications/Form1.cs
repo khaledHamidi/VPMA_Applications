@@ -1,6 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Applications
 {
@@ -9,13 +7,7 @@ namespace Applications
         public Form1()
         {
             InitializeComponent();
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            // كود يبدأ عند تشغيل البرنامج
         }
     }
 }

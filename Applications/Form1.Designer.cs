@@ -32,14 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.colorsBtn = new System.Windows.Forms.Button();
+            this.autoCb = new System.Windows.Forms.CheckBox();
+            this.blueRb = new System.Windows.Forms.RadioButton();
+            this.greenRb = new System.Windows.Forms.RadioButton();
+            this.redRb = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.brightnessNud = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.BlinkCb = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,11 +50,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ledBox = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brightnessNud)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,7 +71,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "تحديث";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -92,7 +92,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.BlinkCb);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(11, 220);
@@ -104,11 +104,11 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.colorsBtn);
+            this.groupBox3.Controls.Add(this.autoCb);
+            this.groupBox3.Controls.Add(this.blueRb);
+            this.groupBox3.Controls.Add(this.greenRb);
+            this.groupBox3.Controls.Add(this.redRb);
             this.groupBox3.Location = new System.Drawing.Point(407, 57);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
@@ -118,60 +118,73 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "اختيار اللون";
             // 
-            // checkBox2
+            // colorsBtn
             // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(45, 171);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(61, 24);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "تلقاءي";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.colorsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.colorsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colorsBtn.ForeColor = System.Drawing.Color.Coral;
+            this.colorsBtn.Location = new System.Drawing.Point(19, 141);
+            this.colorsBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.colorsBtn.Name = "colorsBtn";
+            this.colorsBtn.Size = new System.Drawing.Size(87, 25);
+            this.colorsBtn.TabIndex = 4;
+            this.colorsBtn.Text = ">>";
+            this.colorsBtn.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // autoCb
             // 
-            this.radioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.ForeColor = System.Drawing.Color.CadetBlue;
-            this.radioButton3.Location = new System.Drawing.Point(50, 108);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(56, 24);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "ازرق";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.autoCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.autoCb.AutoSize = true;
+            this.autoCb.Location = new System.Drawing.Point(45, 171);
+            this.autoCb.Name = "autoCb";
+            this.autoCb.Size = new System.Drawing.Size(61, 24);
+            this.autoCb.TabIndex = 6;
+            this.autoCb.Text = "تلقاءي";
+            this.autoCb.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // blueRb
             // 
-            this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.radioButton2.Location = new System.Drawing.Point(45, 78);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(61, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "اخضر";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.blueRb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.blueRb.AutoSize = true;
+            this.blueRb.ForeColor = System.Drawing.Color.CadetBlue;
+            this.blueRb.Location = new System.Drawing.Point(50, 108);
+            this.blueRb.Name = "blueRb";
+            this.blueRb.Size = new System.Drawing.Size(56, 24);
+            this.blueRb.TabIndex = 2;
+            this.blueRb.TabStop = true;
+            this.blueRb.Text = "ازرق";
+            this.blueRb.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // greenRb
             // 
-            this.radioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.Red;
-            this.radioButton1.Location = new System.Drawing.Point(54, 47);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 24);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "أحمر";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.greenRb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.greenRb.AutoSize = true;
+            this.greenRb.ForeColor = System.Drawing.Color.ForestGreen;
+            this.greenRb.Location = new System.Drawing.Point(45, 78);
+            this.greenRb.Name = "greenRb";
+            this.greenRb.Size = new System.Drawing.Size(61, 24);
+            this.greenRb.TabIndex = 1;
+            this.greenRb.TabStop = true;
+            this.greenRb.Text = "اخضر";
+            this.greenRb.UseVisualStyleBackColor = true;
+            // 
+            // redRb
+            // 
+            this.redRb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.redRb.AutoSize = true;
+            this.redRb.ForeColor = System.Drawing.Color.Red;
+            this.redRb.Location = new System.Drawing.Point(54, 47);
+            this.redRb.Name = "redRb";
+            this.redRb.Size = new System.Drawing.Size(52, 24);
+            this.redRb.TabIndex = 0;
+            this.redRb.TabStop = true;
+            this.redRb.Text = "أحمر";
+            this.redRb.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.numericUpDown1);
+            this.groupBox2.Controls.Add(this.brightnessNud);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(68, 57);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -182,20 +195,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ضبط السطوع ";
             // 
-            // numericUpDown1
+            // brightnessNud
             // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.brightnessNud.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(77, 32);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.brightnessNud.Location = new System.Drawing.Point(77, 32);
+            this.brightnessNud.Name = "brightnessNud";
+            this.brightnessNud.Size = new System.Drawing.Size(120, 26);
+            this.brightnessNud.TabIndex = 7;
+            this.brightnessNud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.brightnessNud.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
+            this.brightnessNud.Value = new decimal(new int[] {
             100,
             0,
             0,
@@ -212,16 +225,16 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "نسبة السطوع (%)";
             // 
-            // checkBox1
+            // BlinkCb
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(292, 233);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(99, 24);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "تفعيل الوميض";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.BlinkCb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BlinkCb.AutoSize = true;
+            this.BlinkCb.Location = new System.Drawing.Point(292, 233);
+            this.BlinkCb.Name = "BlinkCb";
+            this.BlinkCb.Size = new System.Drawing.Size(99, 24);
+            this.BlinkCb.TabIndex = 5;
+            this.BlinkCb.Text = "تفعيل الوميض";
+            this.BlinkCb.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -246,7 +259,6 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "اقاف";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -264,7 +276,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.PowderBlue;
             this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 9);
+            this.label4.Location = new System.Drawing.Point(41, 47);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 24);
@@ -313,31 +325,30 @@
             // 
             // ledBox
             // 
-            this.ledBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ledBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ledBox.Location = new System.Drawing.Point(3, 4);
             this.ledBox.Name = "ledBox";
             this.ledBox.Size = new System.Drawing.Size(46, 56);
             this.ledBox.TabIndex = 0;
             this.ledBox.TabStop = false;
             // 
-            // button3
+            // linkLabel1
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Coral;
-            this.button3.Location = new System.Drawing.Point(19, 141);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 25);
-            this.button3.TabIndex = 4;
-            this.button3.Text = ">>";
-            this.button3.UseVisualStyleBackColor = true;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(509, 55);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(53, 16);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "الأصدار: 1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 507);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -354,7 +365,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brightnessNud)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -374,21 +385,22 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox BlinkCb;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton blueRb;
+        private System.Windows.Forms.RadioButton greenRb;
+        private System.Windows.Forms.RadioButton redRb;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox autoCb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox ledBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.NumericUpDown brightnessNud;
+        private System.Windows.Forms.Button colorsBtn;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
